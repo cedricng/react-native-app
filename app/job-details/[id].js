@@ -3,13 +3,13 @@ import {Company, JobAbout, JobFooter,
     JobTabs, ScreenHeaderBtn, Specifics} from '../../components';
   import {COLORS, icons, SIZES} from '../../constants';
   import useFetch from '../../hooks/useFetch';  
-import { useSearchParams, useRouter, Stack } from "expo-router";
+import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { ActivityIndicator, RefreshControl, ScrollView, SafeAreaView, Text, View } from "react-native";
 
 const tabs = ["About", "Qualifications","Responsibilities"];
 
   const JobDetails =() => {
-    const params = useSearchParams();
+    const params = useLocalSearchParams();
     const router = useRouter();
 
     const {data, isLoading, error, refetch} = 
